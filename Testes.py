@@ -16,7 +16,7 @@ for k,v in result.fluxes.items():
     print(k,v)
 
 
-# environmental conditions
+
 #envcond = {'EX_GLC_e': (-10.0, 100000.0),
            #'EX_O2_e':(-5,1000)}
 #from mewpy.simulation import get_simulator
