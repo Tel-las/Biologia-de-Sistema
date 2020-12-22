@@ -5,13 +5,14 @@ model_bounds = {r.id:(r.lower_bound, r.upper_bound) for r in model.reactions}
 for i in model_bounds:
     print(i, model_bounds[i])
 
-from mewpy.simulation import get_simulator
-simul = get_simulator(model)
-print(simul.essential_reactions)
-print(simul.essential_genes)
-print(simul.objective)
-result = simul.simulate(method='pFBA')
-print(result)
+
+#from mewpy.simulation import get_simulator
+#simul = get_simulator(model)
+#print(simul.essential_reactions)
+#print(simul.essential_genes)
+#print(simul.objective)
+#result = simul.simulate(method='pFBA')
+#print(result)
 
 #for k,v in result.fluxes.items():
     #print(k,v)
