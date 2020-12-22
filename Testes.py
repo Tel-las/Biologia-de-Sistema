@@ -19,8 +19,7 @@ for i in model_bounds:
 
 
 #environmental conditions
-envcond = {'EX_GLC_e': (-10.0, 100000.0),
-           'EX_O2_e':(-5,1000)}
+#envcond = {'EX_GLC_e': (-10.0, 100000.0), 'EX_O2_e':(-5,1000)}
 #from mewpy.simulation import get_simulator
 #simul = get_simulator(model, envcond=envcond)
 #result = simul.simulate(method='pFBA')
