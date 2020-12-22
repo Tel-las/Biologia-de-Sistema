@@ -12,13 +12,14 @@ print(simul.essential_genes)
 print(simul.objective)
 result = simul.simulate(method='pFBA')
 print(result)
-for k,v in result.fluxes.items():
-    print(k,v)
+
+#for k,v in result.fluxes.items():
+    #print(k,v)
 
 
-
-#envcond = {'EX_GLC_e': (-10.0, 100000.0),
-           #'EX_O2_e':(-5,1000)}
+#environmental conditions
+envcond = {'EX_GLC_e': (-10.0, 100000.0),
+           'EX_O2_e':(-5,1000)}
 #from mewpy.simulation import get_simulator
 #simul = get_simulator(model, envcond=envcond)
 #result = simul.simulate(method='pFBA')
