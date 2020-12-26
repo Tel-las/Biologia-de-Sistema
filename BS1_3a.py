@@ -13,7 +13,7 @@ BIOMASS_ID = 'BIOMASS_Ec_iML1515_core_75p37M'
 #Optimization objectives
 from mewpy.optimization.evaluation import  BPCY, TargetFlux, WYIELD, BPCY_FVA
 evaluator_1 = WYIELD(BIOMASS_ID, PRODUCT_ID, alpha=1)
-evaluator_2 = WYIELD(BIOMASS_ID, PRODUCT_ID)
+evaluator_2 = WYIELD(BIOMASS_ID, PRODUCT_ID, alpha=0.3)
 #WYIELD(BIOMASS_ID, PRODUCT_ID)
 #TargetFlux(PRODUCT_ID)
 #BPCY_FVA(BIOMASS_ID, PRODUCT_ID)
@@ -24,8 +24,14 @@ from mewpy.problems import GKOProblem
 problem = GKOProblem(model, fevaluation = [evaluator_1, evaluator_2], envcond=envcond, candidate_max_size=1)
 
 from mewpy.optimization import EA
-ea = EA(problem, max_generations= 2, visualizer=True)
+ea = EA(problem, max_generations= 50, visualizer=True)
 final_pop = ea.run()
 print(final_pop)
+gene_list = open('del_gene_list.txt', 'w')
+for i in final_pop:
+    gene_list.write(str(i) + '\n')
+
+gene_list.close()
+
 from mewpy.utils.constants import ModelConstants
 ModelConstants.RESET_SOLVER = True
