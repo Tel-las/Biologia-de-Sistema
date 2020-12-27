@@ -15,7 +15,7 @@ from mewpy.problems import ROUProblem
 problem = ROUProblem(model, fevaluation=[evaluator_1, evaluator_2], envcond=envcond, candidate_max_size=5)
 
 from mewpy.optimization import EA
-ea = EA(problem, max_generations= 30, visualizer=True)
+ea = EA(problem, max_generations= 50, visualizer=True)
 final_pop = ea.run()
 print(final_pop)
 
