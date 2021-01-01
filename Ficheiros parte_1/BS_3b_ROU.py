@@ -5,7 +5,7 @@ envcond = {'EX_glc__D_e': (-15.0, 100000.0),
 
 # Define the target
 PRODUCT_ID = 'EX_mal__L_e'
-BIOMASS_ID = 'BIOMASS_Ec_iML1515_core_75p37M'
+BIOMASS_ID = 'BIOMASS_Ec_iML1515_WT_75p37M'
 
 from mewpy.optimization.evaluation import  BPCY, TargetFlux, WYIELD, BPCY_FVA
 evaluator_1 = WYIELD(BIOMASS_ID, PRODUCT_ID, alpha=1)
